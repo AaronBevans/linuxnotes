@@ -1,0 +1,575 @@
+*Many combinations: These are just a few*
+ls - list out items
+ls -a -  list out all items in a directory.
+ls -l - list out a long list of info on a directory
+ls -s - list the size of a directory or file.
+ls -t - list the date and time a directory or file was last modified.
+ls -lt - lists out the details of when a file or directory was last modified, newest first.
+ls -lrs - lists out info on a dir/file in reverse.
+ls -Sl - list out the size of a dir/file info.
+ls -lst - lists out the size and time a dir/file was modified.
+
+/bin/ls === ls
+
+env = environment variables
+
+PATH = searches/lists directories for commands we have typed in.
+
+echo = returns text we type in.
+
+echo $PATH = all environment variables need a $ before being listed.
+
+whoami = lists out username
+
+echo $LOGNAME = lists out username
+
+su username = logs user into another username
+
+exit = exit
+
+sudo - = logs in as root
+
+sudo su = logs in as root
+
+reboot = reebots a system
+
+init6 = reboots a system (legacy)
+
+init0 = halts or shutsdown a system when root.
+
+halt = halts a system as root
+
+shutdown -h = shuts down system
+
+shutdown -H = halts a system 
+
+shutdown -r = restarts a system
+
+shutdown -P = powers down a system
+
+top = shows top running programs on a system
+
+h = gives options
+
+
+uname = displays system info
+
+uname -a = displays all system info
+
+uname -s = kernel name
+
+uname -r = kernel releave info
+
+uname -v = system version info
+
+uname -m = system machine info
+
+uname -o = operating system name
+
+uname -p = machine processor info
+
+cd = change directory
+
+cd ~ = return home
+
+pwd = prints current work directory
+
+.bash_history = holds record of commands
+
+echo $HISTFILSIZE = shows the bash history file capacity.
+
+echo $HISTCONTROL = sets advanced instructions for bash to follow when running commands.
+
+history = numbered list of previously used commands.
+using a !<number from list> runs that specific command
+
+
+*Shell config files*
+
+tab = autocompletes a command
+
+log in shell = prompted to log in.
+
+.bash_logout = runs when a user logs out.
+
+
+non-log in = identifies real text
+
+/ect/profile = sets up default user environment variables and runs scripts for user logins.
+
+/etc/profile -> /bash_profile = sets up envi variables ->
+
+ /.bashrc = sets user defined command aliases and functions. ->
+
+ /ect/bashrc = system wide function  commands and aliases.
+
+
+*shell variables*
+
+Shell variables = container for values.
+
+
+system changes values of variables based on what we have done.
+
+
+creating variables: VARIABLE_NAME='variable value'
+to access variable: echo $VARIABLE_NAME
+
+to access careted variables in another terminal: export VARIABLE_NAME,
+echo $VARIABLE_NAME
+
+to append to an existing variable. VARIABLE_NAME=$VARIABLE_NAME:/new_data
+
+
+*globbing*
+
+helps up guess name of file or directory with use iof specific wildcard symbols
+
+ls *.file = lists out all of the files with the same file extension. ls *.py
+
+also listsout all files thet begins with specific spelling.
+
+? = lists out files with a certain amount of characters. ls ????.txt
+
+ls test?.file =  lists out any file with a number in the title.
+
+[AaBbCc]* = lists out files with upper or lower case letters. ls [Aa]*.py
+
+[]letters[0-9] = lists out files containing upper/lower case & contains numbers in title.
+
+
+*quotting in the bash shell*
+
+" " = substitutes the echo command for the variale value e.g. echo "This is the $LOGNAME" 
+will print out the $LOGNAME variable value = user.
+
+" " = will also ignore spaces in a file/directory name.
+
+' ' = will print out the literal syntax of a string.
+
+\ = will ignore spaces in a file/directory name
+
+\ = will also ignore $ from iterpreting variables.
+
+ls \ = will allows command switches to run on multiple lines in the bash shell.
+
+
+*Formatting commands*
+$ = regular user
+
+# = root user
+
+Commands; what you want to do, Swicth/Options/Flags; how to execute, Argument; what to execute command on.
+
+
+*Locate, Find, Whereis*
+
+find - searches for files in a directory hierarchy
+
+locate - locates files by name.
+
+whereis - locate the binary, source, and manual file pages for a command. 
+
+
+
+*Using command line to get help*
+
+man - short for manual
+
+
+man <command/argument> - lists out definitions of the command and a list of switches.
+
+
+man # <command/argument> - lists out the section page of command along with information.
+
+
+whatis - lists out summaries in man pages based on what we provide and which page applies to the summary.
+
+man -f = ''
+
+apropos = searches all man pages for key board
+
+man -k = ''
+
+/(at bottom of man page) = allows us to search for keywords within the current man page.
+
+
+*Info Pages*
+
+info - read documentation in Info format.
+
+additional info - /usr/doc/packagename,
+/usr/share/doc/packages/packagename,
+/usr/share/doc/packages/packagename.
+
+
+*Using Directoried and Listing Files*
+
+Role of linux file system; Where computer data is stored on a storage device
+within a certain manner:
+
+- The data is organized and easily located.
+
+- The data can be saved in a persistent manner.
+
+- Data integrity is preserved.
+
+- The data can be quickly retrieved for a user in a later point in time.
+
+directory + . = current directory/directory below.
+
+directory + .. = parent directory/directory above current directory.
+
+.file = represents a document file (drwe permissions)
+
+absolute paths = e.g. /home/cloud_user, cd ../../../; shorthand for 
+accessing previously visited directories.
+
+creating and moving files; mkdir -p; creates a directory and a supplimental
+directory along with it.
+
+mv file destination; moves a file to a destination.
+
+mv fileName newFileName; renames a file or a directory.
+
+rm, rm -f - removes a file and removes a file recursively, removing all 
+subcontents.
+
+
+Archiving files - makes it easier to send a copy of a file or folder in a
+single bundled file, save space on hard disk.
+
+tar - used to dump files/directories in bundled file not compressed; one 
+single archived file. (Tape Archive/ tar balls).
+
+tar -cf - creates an archive/name main_directory.tar main_directory
+
+tar -tf main_directory.tar - allows us to list the contents of our archive without
+extracting the contents.
+
+cp main_directory.tar location - allows us to copy the archive into a location/
+
+tar -xf main_directory.tar - allows us to extract the contents of the archive 
+back onto our file system.
+
+rm -r * - allows us to remove everything from a directory
+
+rm *.tar removes an archive.
+
+
+creating a compressed version of an archive file.
+
+
+tar -czf fileName.tgz fileName  or fileName.tar.gz fileName - to create compressed file
+
+tar -czf fileName.tar.gz fileName creates a gzipped archive file.
+
+tar -xvzf fileName.tar.gz - to extract gzip archive back on file system.
+
+tar -xvzf fileName.tar.gz -C fileDirectory. 
+
+rm -r fileName - to delete original file directory.
+
+
+
+b2zip compressed archived files.
+
+
+tar -cjf fileName.tar.bz2 fileName -creates bzip compressed archive,  requires more disk space.
+
+tar -xvjf fileName.tar.bz2 - to extract .tar.bz2 compressed archived verbose info.
+
+rm -r fileName - deletes orginal file.
+
+
+
+*creating a compressed zip file*
+
+zip -r fileName.zip fileName - creates a recursive compressed file.
+
+rm -r fileName - removes original file name.
+
+unzip fileName.zip - to decompress and  extract a file 
+
+
+compressing single zip files
+
+
+cd into directory if needed.
+
+zip fileName.extension -  to compress a single file.
+
+unzip fileName.zip - extract a compressed zip file.p
+
+unzip fileName.zip -C fileDirectory - to extract into a targeted location..
+
+gzip *.extension - to compress a single gzip  file. 
+
+gunzip *.extension
+
+bzip2 *.extension to compress a single file.
+
+bunzip *.extension to extract an archived file.
+
+
+
+*viewing text*
+
+less - allows us to scroll through output and search for keywords.
+use arrow keys to look up and down, page up/down
+
+/? - to search for keywords
+
+q -  to quit.
+
+head -  shows first 10 lines of a file then exit.
+
+head -n #number - allows to specify how many lines user can see.
+
+tail - shows last 10 of a file
+
+tail -n #number - shows specified last number of lines of a file.
+
+tail -f /var/log/secure -  shows us any new entries being made inside
+a file.
+
+ctrl + c - to cancel any command.
+
+
+*Analyzing text*
+
+output redirection - head -n #number of lines > location
+head -n #number of lines >> location (appends new data to new line) location.
+
+cut -d" " -f #-# location > new location - removes certain fields of text and sends
+it to a new location.
+
+sort - sorts content of a file alphabetically and numerically 
+
+echo >> locatioon - prints a blank line into a document.
+
+echo * Text * > location - created a heading in a file.
+
+wc - prints out the words line and byte count of a document.
+
+wc -lw filename >> location - adds details of a file to a document.
+
+
+*Pipes and Regular Expressions*
+
+grep - shows the lines in a file that match a given pattern
+grep <pattern> <filename>
+
+grep -i fileName - performs a case insensitive search.
+
+grep -v fileName - returns lines that do  not contain the pattern.
+
+grep -r fileName - performs a recursive search
+
+grep -switch fileName | command - used to send output of one command as input
+to another command.
+
+using grep - command | command2
+
+grep '^string' fileName -  only shows the string that shows up in the beginning of a file.
+
+grep '^[Aa]' fileName - shows letter at the beginning of a file.
+
+grep '^.[a]' fileName - shows the character that is listed second in a string.
+
+grep 'aaa*' fileName - print out whatever has at least 3 a's in the line.
+
+grep '\baaa\b' fileName - search for specific pattern if you have more than one letter
+in a row. Print any line that has more than one letter together.
+
+ | grep 'string' > location - moves all requested regex to a new location.
+
+
+*excercise notes: listing info, retrieving info/more,  relocating info* 
+
+cat /var/log/messages | grep 'DHCPREQUEST'
+
+cat /var/log/messages | grep 'DHCPREQUEST' | more
+
+cat /var/log/messages | grep 'DHCPREQUEST' > file.log
+
+
+*vi/vim*
+
+
+vim + enter - command mode; move cursor.
+
+i - insert mode; text can be modified.
+
+esc - to leave i mode; back to command mode,
+
+o - insert mode a line below
+
+h - move cursor left
+
+k - moves cursor up
+
+l - moves cursor right
+
+j - moves cursor down
+
+v - visual mode
+
+v + direction keys - selecting text to be copied.
+
+y - yanks highlighted/copies text
+
+p - pastes text to new line
+
+u - undo last action
+
+ex mode - exit file
+
+:w fileName - saves the file.
+
+:q! - exits out of a file with no name.
+
+dw - deletes word under cursor.
+
+gg - jump to top of editor.
+
+vimtutor - to get a complete walkthrough of vim.
+
+
+
+*Shell scripting part 1*
+
+purpose - file that allows a series of comands to run at any given time.
+
+#!/bin/bash -(shebang) used to declare a shell script.
+
+#comment - makes notes about a program ignored by interpreter.
+
+ls -l fileName.ext - view the permissions for a file.
+
+chmod +dxwr fileName.ext - changes the mode of a file.
+
+/home/user/daily.sh ^C - accesses a files direct path and file itself.
+
+./daily.sh + enter - accesses a file in current directory.
+
+mkdir bin - to store a shell script to.
+
+mv fileName.ext bin/ - relocates the script into bin folder
+
+fileName.ext + enter to run the script.
+
+
+*conditional statements*
+if [ "1" == "1" ]; (- tests if a condition is true) 
+
+then (- allows commands to run)
+
+echo "correct" (- command to run)
+
+fi (- finishes the conditional statement)
+
+*for looping*
+
+
+
+*access script files*
+nano or vim bin/fileName.ext - to access shell script.
+
+*scripting variables*
+VARIABLE="variables can be changed/used based on script necessities."
+
+
+*computer hardware*
+
+processor - core; where computations take place; multiple processors
+
+arm processor - located in tablets and cell phones
+
+cat /proc/cpuinfo - details about processor on computer
+
+ram - random access memory; where memory for apps and unsaved files
+are stored until properly saved and closed. Fast performing.
+ram is emtied out when computer is powered off.
+
+free - Display amount of free and used memory in the system.
+
+free -g - Display the amount of memory in gigabytes.
+
+free -m - Display the amount of memory in megabytes.
+
+motherboard - connects everything together and is designed around
+that processor it will support along with specific RAM
+
+bios - chip that contains firmware that proceesses events such as 
+power switched being pressed, keys being pressed etc.
+
+sudo dmidecode - displays info about motherboard, BIOS, processor and RAM
+on a system.
+
+power supply - delivers power to motherboard from wall socket.
+
+hard disk - device that stores saved data; files, apps, os
+stored here.
+
+/dev - location where all hard drive info is located.
+
+lsblk - details all block devices attached to the system.
+
+df - displays free disk space on hard disk
+
+df -h - displays human readble info about free disk space.
+
+optical drives - devices; cd-rom, dvd-rom, blue-ray becoming
+obsolete because downloads, and cloud storage is becoming more
+popular.
+
+
+*linux processes*
+
+processes are set of instructions loaded into memory.
+
+come from a program that is running.
+
+PID - process identification.
+
+PID 1 - #1 primary process on unix like systems
+
+system - stream line how processes are handled.
+
+ps - list processes running on a system.
+
+indented - child processes of most current running process.
+
+-e - list all processes running on a system
+
+-eH - list all processed with indented output, displaying the
+current running process hiearchy.
+
+-eHf - shows full listing of current running process hiearchy.
+
+-top - displays running processes in near real time.
+
+-k - kills a specific process.
+
+
+
+*system logging*
+
+used to keep track of system health and used for
+trouble shooting
+
+sudo cd /var/log - contains log files 
+
+messages - contains updated information of what is going on
+in the system.
+
+secure - contains defense report; contains user elevation privilege; 
+logins/failed logins etc.
+
+dmesg | less - is used to examine or control the kernel ring buffer.
+
+kernel ring buffer - location that displays info/messages related to the ops 
+of the kernel.
+
+

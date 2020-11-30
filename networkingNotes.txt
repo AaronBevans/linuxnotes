@@ -1,0 +1,282 @@
+1. Protocols & Topologies
+
+. Networking - process of interacting with others to exchange information.
+
+. Computer networking - computers interacting with each other to exchange data.
+
+. Common language and rules are used  so computers can interact.
+
+. Topologies - Layout of connections between computers
+
+. Every topology has different advantages and dis advantages.
+
+. Redundancy is important.
+
+. Types - star, bus, ring, mesh.
+
+. Ring Network(token ring network) - computers are connected to a closed 
+loop cable.
+
+. RN - Tokens  help send data along the ring, once data reaches destination
+token is stripped of the data and continues along the ring and stands by
+for another device to attach data to it
+
+. RN - No terminating ends.
+
+. RN - computers and devices function as repeaters.
+
+. RN - Tokens are required to send data.
+
+. Bus Each end of trunk must be terminated to prevent signal from rebounding back
+through cable.
+
+. Mesh Networks - Full or partial
+All or most compurters are connected to eachother. Expensive network.
+High redundancy. Many Routes.
+
+. MN - partial mesh =  good redundancy, not as expensive.
+. Star Network - Most common type of topology. Connected to central hub/switch.
+Good amount of redundancy.
+
+*  Network+ Basics/Concepts * - OSI vs. TCP/IP Model, IP Class Ranges, Subnets and CIDR notation,
+Network communication, Common ports =  DNS, DHCP, Telnet, SSH, HTTPS.
+
+. OSI Model = Operating System Interconnection model - can give a basic visual to
+help with design and troubleshooting issues.
+
+. OSIm - Conceptual framework that describes the communication 
+ functions of a telecommunications or computing  networking system.
+
+. OSIm - 7 Layers:
+
+		7. Application - Network Process to Application - Data
+		
+		6. Presentation - Data Representation & Encryption - Data
+
+		5. Session - Inter-Host Communication - Data
+
+		4. Transport - End-to-End Connections and reliability - Segments
+
+		3. Network - Path determination & IP - Packets
+
+		2. Data Link - MAC & LLC (Physical Addressing) - Frames
+
+		1. Physical -  media, signal, binary transmission - Bits
+
+
+. TCP/IP Model - Transmission Control Protocol/Internet Protocol
+
+. TCP/IPm - Concise version of OSIm, containing 4 layers.
+
+. TCP/IPm 4 Layers: 
+
+		4. Application = App, Presentation, session - Data
+
+		3. Transport = Transport - Segment
+	
+		2. Internet = Network - Packets
+		
+		1. Network Interface = Data Link +  Physical - Bits
+
+
+. TCP/IPm - Differs from OSI
+
+. TCP/IPm - Combines several layers
+
+. TCP/IPm - Much more common today 
+
+. IP Addressing = Internet Protocol address
+
+. IP Addressing - every device on a network has an IP address
+
+. Two types of current versions of IP addressing
+
+. IPv4 & IPv6 
+
+. IP addressing can be set statically or dynamically using DHCP
+
+. IP addressing can be broken into a network address and host address.
+
+. IP address example: 192.168.0.11/24
+
+
+. IPv4 - Public and private addressing 
+
+. Private Address Classes
+
+	. A - 10.0.0.0 - 10.255.255.255
+
+	. B - 172.16.0.0 - 17.31.255.255
+
+	. C - 192.168.0.0 - 192.168.255.255
+
+. IPv4 uses 32 bit address
+
+. IPv4 is running out of IP addresses.
+
+. IPv6 - created to address the shortage of IPv4 addresses.
+
+. IPv6 - Eight groups of hexadecimal numbers
+
+. IPv6 - Groups of all 0s can be omitted to save space
+
+. Example: 2001:cdba:0000:0000:0000:0000:3257:9652
+
+can also be referred to as 2001:cdba:3257:9652
+
+
+Network Communication
+
+. Unicast - one to one communication; device to device
+
+. Broadcast - one to many
+
+. Multicast - one device to many certain devices - uses igmp internet group
+management protocol to identify groups and group members.
+
+
+Common Ports and protocols
+
+. 0 - 65535 - 0 to 1023 well known ports
+
+. FTP - 20, 21; file transfer protocol
+
+. SSH - 22; secure shell
+
+. Telnet - 23; remote login  service unencrypted
+
+. SMTP  -25; simple mail transfer protocol
+
+. DNS - 53; Domains Name System
+
+. HTTP - 80; hyper text transfer protocol
+
+. HHTPS - 443; secure http
+
+. NTP - 123; network time protocol
+
+. SNMP - 161; simple network management protocol
+
+. RDP - 3389; remote desktop protocol
+
+
+* Network Troubleshooting method * 
+
+. Identify problem
+
+. Gather information
+
+. Establish theory of cause
+
+. Test the theory
+
+. Determine plan of action to resolve problem
+
+. implement plan
+
+. verify system functionality
+
+. Document
+
+
+ * Troubleshooting Tools *
+
+. Ping
+
+. Traceroute/tracert
+
+. NSLookup and Dig
+
+. ipconfig or ifconfig
+
+. Netstat
+
+. Route
+
+
+* Network Devices * 
+
+>  Router - Operates at layer 3 of the OSI model
+
+. connects seperate networks
+
+. Learn routes
+
+. forward packages
+
+
+
+> Switch - operate at layer 2 of OSI model
+
+. Connects man devices to a LAN
+
+. Uses frames instead of packets
+
+. Forwards based on MAC addresses
+
+
+> Firewalls
+
+. Typically work at layers 3 - 4 but can operate up to the application layer
+as well.
+
+. Seperate internal networks from the internet
+
+. work based on rules
+
+. many types of firewalls.
+
+. NGF - next generation firewalls
+
+
+> NIDS - Network Intrusion Detetction System
+
+. Monitors traffic at selected points of network in real time
+
+. Typically have one server and several sensors
+
+. Detected and alert on potentially malicious traffic
+
+
+> Testing Network Connectivity
+
+
+ ipconfig 
+
+. Internet protocol configuration (windows)
+
+. view network configuration
+
+. release and renew DHCP address; Dynamic Host Configuration Protocol 
+
+
+ ping 
+
+. Verifies connectivity to another computer
+
+. Uses TCP/IP protocol
+
+. Internet Control Message Protocol (ICMP) echo requests
+
+ 
+ tracert 
+
+. Trace Route
+
+. Determine route to destination
+
+. Uses ICMP packets
+
+. Calculates Time-to-live (TTL)
+
+
+telnet 
+
+. Protocol to interact with remote computers
+
+. Used to test TCP connections
+
+. Combine host name/IP address and port
+
+
+ 
